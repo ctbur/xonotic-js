@@ -1,0 +1,3 @@
+[submodule "xonotic"]
+	path = xonotic
+	url = git@gitlab.com:ctbur/xonotic.git
