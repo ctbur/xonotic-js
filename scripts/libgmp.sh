@@ -13,7 +13,7 @@ echo '#define HAVE_STRNLEN 1' >> config.h
 echo '#define HAVE_VSNPRINTF 1' >> config.h
 
 emmake make -j
-emmake make install
+emmake make -j install
 
 cd ..
 rm -rf gmp-6.1.2*

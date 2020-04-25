@@ -1,7 +1,7 @@
 #!/bin/bash
 
 wget https://github.com/libjpeg-turbo/libjpeg-turbo/archive/2.0.4.tar.gz
-tar xf libjpeg-turbo-2.0.4.tar.gz
+tar xf 2.0.4.tar.gz
 cd libjpeg-turbo-2.0.4
 mkdir build && cd build
 
