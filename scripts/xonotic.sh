@@ -29,7 +29,6 @@ CFLAGS_ADDITIONAL="-s USE_SDL=2 -s USE_LIBPNG=1 -s USE_ZLIB=1 -s USE_OGG=1 -s US
 emmake make -j sdl-release DP_CRYPTO_STATIC_LIBDIR=$(pwd)/../d0_blind_id/.libs CFLAGS_ADDITIONAL="$CFLAGS_ADDITIONAL" DP_SOUND_API=NULL DP_CDDA=disabled DP_VIDEO_CAPTURE=disabled DP_LINK_ZLIB=shared DP_LINK_JPEG=shared DP_LINK_ODE=shared DP_LINK_CRYPTO=shared DP_LINK_CRYPTO_RIJNDAEL=shared
 
 # remove
-# LINK_TO_LIBVORBIS 1
 # grep -rl Sys_LoadLibrary
 
 cd ..

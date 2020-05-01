@@ -18,5 +18,6 @@ emconfigure ./configure --enable-static --disable-shared --prefix=$EMSCRIPTEN/sy
 emmake make -j
 emmake make -j install
 
+cd ..
 rm ogg.tar.gz vorbis.tar.gz
 rm -rf Ogg-version_1 Vorbis-version_1
