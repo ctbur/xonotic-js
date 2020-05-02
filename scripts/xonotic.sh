@@ -21,17 +21,12 @@ cd ../darkplaces
 rm /usr/bin/strip
 ln -s /bin/true /usr/bin/strip
 
-exit 9999
-
-CFLAGS_ADDITIONAL="-g4 -s ASSERTIONS=1 -s USE_SDL=2 -s USE_LIBPNG=1 -s USE_ZLIB=1 -s USE_OGG=1 -s USE_VORBIS=1 -s USE_FREETYPE=1 -s FETCH=1 -s LEGACY_GL_EMULATION=1 -DHAVE_STRLCAT=1 -DHAVE_STRLCPY=1 -DDP_FREETYPE_STATIC=1 -DLINK_TO_LIBVORBIS=1"
+CFLAGS_ADDITIONAL="-g4 -s ASSERTIONS=1 -s USE_SDL=2 -s USE_LIBPNG=1 -s USE_ZLIB=1 -s USE_OGG=1 -s USE_VORBIS=1 -s USE_FREETYPE=1 -s FETCH=1 -s LEGACY_GL_EMULATION=1 -DHAVE_STRLCAT=1 -DHAVE_STRLCPY=1 -DDP_FREETYPE_STATIC=1 -DLINK_TO_LIBVORBIS=1 -DLINK_TO_LIBPNG=1"
 emmake make -j sdl-release DP_CRYPTO_STATIC_LIBDIR=$(pwd)/../d0_blind_id/.libs CFLAGS_ADDITIONAL="$CFLAGS_ADDITIONAL" DP_SOUND_API=NULL DP_CDDA=disabled DP_VIDEO_CAPTURE=disabled DP_LINK_ZLIB=shared DP_LINK_JPEG=shared DP_LINK_ODE=shared DP_LINK_CRYPTO=shared DP_LINK_CRYPTO_RIJNDAEL=shared
 #emmake make -j sv-release DP_CRYPTO_STATIC_LIBDIR=$(pwd)/../d0_blind_id/.libs CFLAGS_COMMON="$CFLAGS_COMMON" DP_SOUND_API=NULL DP_CDDA=disabled
 #emmake make -j cl-release DP_CRYPTO_STATIC_LIBDIR=$(pwd)/../d0_blind_id/.libs CFLAGS_COMMON="$CFLAGS_COMMON" DP_SOUND_API=NULL DP_CDDA=disabled
 
-# TODO: remove
-# grep -rl Sys_LoadLibrary
-# cp darkplaces-sdl.{js,html,wasm,wasm.map} /src/out
-# cp ../../../xonotic/source/darkplaces/{libcurl_emscripten.c,libcurl.c} .
+cp darkplaces-sdl.{js,html,wasm,wasm.map,data} /src/out
 
 cd ..
 #rm xonotic-build
